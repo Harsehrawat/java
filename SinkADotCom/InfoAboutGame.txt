@@ -1,0 +1,13 @@
+
+1-> User starts the game :
+    Game creates 3 dotCOms,
+    Game places the three dotCOms onto a virtual grid
+
+2-> Game Play Begins :
+    Prompt user for a guess (ex. "A2" , "C0" etx)
+    check the user guess against all dotCOms to look for a 
+    hit, miss, kill. Take appropriate actions; if a hit,delete
+    cell . If a kill , delete dotCOm
+
+3-> Game Finishes : 
+    Give the user a rating based on the number of guesses
