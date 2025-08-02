@@ -1,0 +1,4 @@
+// For running my entire PolyMorphism Package: i moved one level up (i.e. Classes and Objects) 
+// to manage all .class files seperately , i used -d (direction) command during PolyMorphism compile command 
+// and wrote my command as: javac -d dist PolyMorphism/*.java 
+// and to run : java -cp dist PolyMorphism.Main to run Main class under PolyMorphism package 
