@@ -2,3 +2,13 @@
 // to manage all .class files seperately , i used -d (direction) command during PolyMorphism compile command 
 // and wrote my command as: javac -d dist PolyMorphism/*.java 
 // and to run : java -cp dist PolyMorphism.Main to run Main class under PolyMorphism package 
+
+
+
+Hey,
+
+I'm excited to apply because I really enjoy dwelling myself into an environment that i could offer my skills to and could also grow myself.
+Over the past Year, I've learned about software development through college, side projects and through my experience at Jio Platforms Ltd. Bangalore in office mode. 
+If given chance, I assure you i'd be the right candidate for this opportunity.
+
+Thanks
