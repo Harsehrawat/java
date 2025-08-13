@@ -1,0 +1,51 @@
+// In PolyMorphism u'd notice Animal class should not be allowed to be having its own object type created by user.
+// Similarly, there are many classes and methods that should not be instantiated . To DISALLOW them from being instantiated, we use Abstraction.
+
+// PTR: By marking the class as abstract, the compiler will stop any code, anywhere, from ever creating an instance of that type.
+//      Although, you can still use that abstract type as a reference type.
+
+
+
+// ANSWER TO WHY WE EVEN THEN CARE TO WRITE processPayments() in our superclass when we've to declare it in each of subclass with no subclass using it.
+
+Here’s why we do put processPayment() in the superclass as an abstract method, instead of just leaving it in the subclasses:
+
+1 — Enforces a Contract
+Without the abstract method, nothing forces a new subclass to implement processPayment().
+
+With abstraction:
+
+If you create class BankTransferPayment extends Payment and forget to add processPayment(), the compiler will not compile until you implement it.
+
+Without abstraction:
+
+The code will compile, but at runtime you might end up with a “half-implemented” subclass that can’t actually process payments.
+
+2 — Enables Polymorphism
+The whole point of writing:
+
+java
+Copy
+Edit
+Payment p = new CreditCardPayment();
+p.processPayment(100.0);
+…is that the caller doesn’t need to know what type of payment it is.
+
+If processPayment() is in the superclass, you can store different payment types in the same list or variable and call it without casting.
+
+Without it in the superclass, you’d need if/else checks or instanceof to figure out which subclass you’re dealing with — messy and brittle.
+
+3 — Shared Workflow
+Sometimes the superclass defines a template (overall process) and lets subclasses fill in specific steps.
+Example:
+
+java
+Copy
+Edit
+public final void completeTransaction(double amount) {
+    verifyFunds(amount);
+    processPayment(amount); // abstract step
+    generateReceipt(amount);
+}
+Here, processPayment() is just one step in a larger fixed algorithm.
+If it’s not in the superclass, you can’t build this pattern cleanly.
