@@ -1,0 +1,36 @@
+What is Thread ?
+Thread is the smallest unit of processes which executes independently within the program, JVM allows an application multiple threads of execution concurrently.
+
+Methods Defined in Thread Class:
+| Method                               | What it does
+
+| `start()`                            | Creates a new OS-level thread and calls `run()` internally 
+   
+| `run()`                              | (The code that executes when the thread runs. By default, it does nothing (`public void run() {}`). You override it in your subclass or pass a `Runnable`) |
+
+| `currentThread()`                    | (Static method. Returns a reference to the thread currently executing. )
+
+| `getName()` / `setName(String)`      | (Get or set the thread’s name.)
+
+| `getId()`                            | (Returns the unique ID of the thread.)
+
+| `getPriority()` / `setPriority(int)` | (Get or set thread priority (1–10).)
+
+| `getState()`                         | (Returns the current state of the thread (NEW, RUNNABLE, BLOCKED, WAITING,TIMED_WAITING, TERMINATED).)
+
+| `isAlive()`                          | (Checks if the thread has been started and hasn’t finished yet.)
+
+| `join()` / `join(long millis)`       | (Wait for this thread to die. Main thread can pause until this thread completes.)
+
+| `sleep(long millis)`                 | (Static method. Pause the **current thread** for given milliseconds.)
+
+| `yield()`                            | (Static method. Hint to JVM that current thread is willing to give up CPU to other threads.)
+
+| `interrupt()`                        | (Interrupts the thread (useful if it’s waiting/sleeping).)
+
+| `isInterrupted()` / `interrupted()`  | (Check or clear the interrupt status of a thread.)
+
+| `setDaemon(boolean)`                 | (Marks the thread as daemon (background) or user thread.)
+
+| `toString()`                         | (Returns thread info: name, priority, group.)
+
